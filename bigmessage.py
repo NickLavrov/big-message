@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-from alphabet import alphabet, height, width
+from alphabet import alphabet, height
 
 def convert_phrase(phrase, background, foreground, border):
 	msg = ''
@@ -12,14 +12,13 @@ def convert_phrase(phrase, background, foreground, border):
 		output = [[] for i in range(height)]
 
 		# fill in each character
-		for c in word:
+		for i, c in enumerate(word):
+			width = len(alphabet[c])//height
 			for row in range(len(output)):
 				output[row].extend(alphabet[c][row*width:(row+1)*width])
-
-		# insert char spacing
-		for row in output:
-			for i in range(len(word)-1):
-				row.insert(width+(width+1)*i, 0)
+				# insert char spacing
+				if i != len(word)-1:
+					output[row].append(0)
 
 		# add border
 		if border:
