@@ -1,0 +1,20 @@
+version: 2
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-2.7
+      - test-3.5
+jobs:
+  test-2.7:
+    docker:
+      - circleci/python:2.7-jessie
+    steps:
+      - checkout
+      - run: python test.py
+  test-2.5:
+    docker:
+      - circleci/python:2.5-jessie
+    steps:
+      - checkout
+      - run: python test.py
