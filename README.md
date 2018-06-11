@@ -84,4 +84,4 @@ optional arguments:
 The expected test results are hardcoded to the originally-provided "font." If you change the font, tests may fail unless you update them accordingly.
 
 ## Customizing
-Characters are encoded as a list with 20 elements (4*5). A `1` indicates a foreground pixel and a `0` indicates a background pixel. If you wish to modify the style of these characters, you can find them in `alphabet.py`. This tool is set up for monospaced fonts only, so all characters must have the same dimensions. You can change the value of `height` and `width` if your design is not 4x5.
+Characters are encoded as a list with (height*width) elements. A `1` indicates a foreground pixel and a `0` indicates a background pixel. If you wish to modify the style of these characters, you can find them in `alphabet.py`. You can change the value of `height` if your design is not 5 pixels tall. All characters must have the same height.
