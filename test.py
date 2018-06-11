@@ -1,5 +1,4 @@
 import unittest
-from alphabet import alphabet, height, width
 from bigmessage import convert_phrase
 
 import unittest
@@ -17,11 +16,11 @@ class BigMessageTestCase(unittest.TestCase):
 
 	def test_one_word(self):
 		output = convert_phrase('HI', '0', '1', False)
-		expected = '''100101111
-100100100
-111100100
-100100100
-100101111
+		expected = '''10010111
+10010010
+11110010
+10010010
+10010111
 '''
 		self.assertEqual(output, expected)
 
@@ -43,13 +42,13 @@ class BigMessageTestCase(unittest.TestCase):
 
 	def test_one_word_border(self):
 		output = convert_phrase('HI', '0', '1', True)
-		expected = '''00000000000
-01001011110
-01001001000
-01111001000
-01001001000
-01001011110
-00000000000
+		expected = '''0000000000
+0100101110
+0100100100
+0111100100
+0100100100
+0100101110
+0000000000
 '''
 		self.assertEqual(output, expected)
 
