@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run: python test.py
-  test-2.5:
+  test-3.5:
     docker:
-      - circleci/python:2.5-jessie
+      - circleci/python:3.5-jessie
     steps:
       - checkout
       - run: python test.py
