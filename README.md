@@ -1,5 +1,7 @@
 # Big Message!
 
+[![CircleCI](https://circleci.com/gh/NickLavrov/big-message/tree/master.svg?style=svg)](https://circleci.com/gh/NickLavrov/big-message/tree/master)
+
 ```
 📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢📢
 📢🔔📢📢📢📢📢🔔🔔📢📢📢🔔🔔📢📢🔔📢📢🔔📢
